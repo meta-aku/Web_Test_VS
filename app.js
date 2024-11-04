@@ -1,24 +1,24 @@
 function playRock() {
     clear();
     play(0);
-    document.getElementById("playerRock").innerHTML = "This works";
+    document.getElementById("playerRock").innerHTML = "Player's choice";
 }
 function playPaper() {
     clear();
     play(1);
-    document.getElementById("playerPaper").innerHTML = "This works";
+    document.getElementById("playerPaper").innerHTML = "Player's choice";
 }
 function playScissors() {
     clear();
     play(2);
-    document.getElementById("playerScissors").innerHTML = "This works";
+    document.getElementById("playerScissors").innerHTML = "Player's choice";
 
 }
 
 function play(player) {
     let enemyChoice = Math.floor(Math.random() * 3);
     console.log(enemyChoice);
-    console.log("This is player " + player)
+    console.log("This is player " + player);
 
     if (enemyChoice === player) {
         document.getElementById("playerRock").innerHTML = "draw";
@@ -29,9 +29,17 @@ function play(player) {
         document.getElementById("enemyPaper").innerHTML = "draw";
         document.getElementById("enemyScissors").innerHTML = "draw";
     }
-    else {
-        document.getElementById("enemyRock").innerHTML = "This works";
+
+    else if (enemyChoice % 3 === 0) {
+        document.getElementById("enemyRock").innerHTML = "Enemy's choice";
     }
+    else if (enemyChoice % 3 === 1) {
+        document.getElementById("enemyPaper").innerHTML = "Enemy's choice";
+    }
+    else if (enemyChoice % 3 === 2) {
+        document.getElementById("enemyScissors").innerHTML = "Enemy's choice";
+    }
+
     /*
     if (enemyChoice % 3 === 0) {
         document.getElementById("enemyRock").innerHTML = "This works";
