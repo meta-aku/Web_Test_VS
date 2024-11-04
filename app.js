@@ -1,21 +1,24 @@
 function playRock() {
+    let player = 0
     clear();
-    enemy();
+    play();
     document.getElementById("playerRock").innerHTML = "This works";
 }
 function playPaper() {
+    let player = 1
     clear();
-    enemy();
+    play();
     document.getElementById("playerPaper").innerHTML = "This works";
 }
 function playScissors() {
+    let player = 2
     clear();
-    enemy();
+    play();
     document.getElementById("playerScissors").innerHTML = "This works";
 
 }
 
-function enemy() {
+function play() {
     let enemyChoice = Math.floor(Math.random() * 3);
     console.log(enemyChoice);
     if (enemyChoice % 3 === 0) {
