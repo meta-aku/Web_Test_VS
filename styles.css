@@ -1,9 +1,17 @@
+
+/*Header*/
 #headerDiv {
     height: 100px;
-    width: 960px;
     background-color: aqua;
+    margin-bottom: 1em;
 }
 
 #header {
     font-family: 'Times New Roman', Times, serif;
+}
+
+/*Main content*/
+#contentMain {
+    height: 400px;
+    background-color: aquamarine;
 }
