@@ -50,6 +50,8 @@
     text-align: center;
 }
 
+
+
 #headerArena {
     font-family: 'Times New Roman', Times, serif;
     padding: 1em;
@@ -63,9 +65,28 @@
     column-gap: 20px;
 }
 
+#playerStatus {
+    height:50px;
+    width: 100%;
+    background-color:aqua;
+}
+
 #colArena1, #colArena2, #colArena3 {
     height: 300px;
     width: 250px;
     background-color: #d4ac0d;
     text-align: center;
 }
+
+#enemyStatus {
+    height:50px;
+    width: 100%;
+    background-color: aqua;
+}
+
+#playerStatus, #enemyStatus {
+    flex: 0 0 92px;
+    display: flex;
+    align-items: center;
+}
+  
