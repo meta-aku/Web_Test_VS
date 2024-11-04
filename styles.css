@@ -1,0 +1,9 @@
+#headerDiv {
+    height: 100px;
+    width: 960px;
+    background-color: aqua;
+}
+
+#header {
+    font-family: 'Times New Roman', Times, serif;
+}
