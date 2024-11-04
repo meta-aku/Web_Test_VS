@@ -2,16 +2,29 @@
 /*Header*/
 #headerDiv {
     height: 100px;
-    background-color: aqua;
+    background-color: #cb4335;
     margin-bottom: 1em;
+    text-align: center;
 }
 
 #header {
     font-family: 'Times New Roman', Times, serif;
+    padding: 1em;
 }
 
 /*Main content*/
 #contentMain {
     height: 400px;
-    background-color: aquamarine;
+    background-color: #f1c40f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+#col1, #col2, #col3 {
+    height: 300px;
+    width: 250px;
+    background-color: #d4ac0d;
+    text-align: center;
 }
