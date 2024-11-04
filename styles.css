@@ -1,8 +1,19 @@
+/*Meta styles*/
+#scoreBoard {
+    height: 50px;
+
+}
+
+#ScoreText {
+    text-align: center;
+    background-color:chocolate;
+    color:aliceblue;
+}
 
 /*Header*/
 #headerDiv {
     height: 100px;
-    background-color: #cb4335;
+    background-color: #ba4a00;
     margin-bottom: 1em;
     text-align: center;
 }
@@ -12,6 +23,7 @@
     padding: 1em;
 }
 
+/*home.html*/
 /*Main content*/
 #contentMain {
     height: 400px;
@@ -23,6 +35,35 @@
 }
 
 #col1, #col2, #col3 {
+    height: 300px;
+    width: 250px;
+    background-color: #d4ac0d;
+    text-align: center;
+}
+
+/*arena.html*/
+/*Arenacontent content*/
+#headerDivArena {
+    height: 100px;
+    background-color: #cb4335;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+#headerArena {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 1em;
+}
+#contentArena {
+    height: 400px;
+    background-color: #ffb74d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+#colArena1, #colArena2, #colArena3 {
     height: 300px;
     width: 250px;
     background-color: #d4ac0d;
