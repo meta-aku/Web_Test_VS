@@ -1,26 +1,38 @@
 function playRock() {
-    let player = 0
     clear();
-    play();
+    play(0);
     document.getElementById("playerRock").innerHTML = "This works";
 }
 function playPaper() {
-    let player = 1
     clear();
-    play();
+    play(1);
     document.getElementById("playerPaper").innerHTML = "This works";
 }
 function playScissors() {
-    let player = 2
     clear();
-    play();
+    play(2);
     document.getElementById("playerScissors").innerHTML = "This works";
 
 }
 
-function play() {
+function play(player) {
     let enemyChoice = Math.floor(Math.random() * 3);
     console.log(enemyChoice);
+    console.log("This is player " + player)
+
+    if (enemyChoice === player) {
+        document.getElementById("playerRock").innerHTML = "draw";
+        document.getElementById("playerPaper").innerHTML = "draw";
+        document.getElementById("playerScissors").innerHTML = "draw";
+
+        document.getElementById("enemyRock").innerHTML = "draw";
+        document.getElementById("enemyPaper").innerHTML = "draw";
+        document.getElementById("enemyScissors").innerHTML = "draw";
+    }
+    else {
+        document.getElementById("enemyRock").innerHTML = "This works";
+    }
+    /*
     if (enemyChoice % 3 === 0) {
         document.getElementById("enemyRock").innerHTML = "This works";
     }
@@ -30,6 +42,7 @@ function play() {
     if (enemyChoice % 3 === 2) {
         document.getElementById("enemyScissors").innerHTML = "This works";
     }
+        */
 
     
         
