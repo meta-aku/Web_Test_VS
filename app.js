@@ -21,13 +21,17 @@ function play(player) {
     console.log("This is player " + player);
 
     if (enemyChoice === player) {
-        document.getElementById("playerRock").innerHTML = "draw";
-        document.getElementById("playerPaper").innerHTML = "draw";
-        document.getElementById("playerScissors").innerHTML = "draw";
+        document.getElementById("playerRock").innerHTML = "DRAW";
+        document.getElementById("playerPaper").innerHTML = "DRAW";
+        document.getElementById("playerScissors").innerHTML = "DRAW";
 
-        document.getElementById("enemyRock").innerHTML = "draw";
-        document.getElementById("enemyPaper").innerHTML = "draw";
-        document.getElementById("enemyScissors").innerHTML = "draw";
+        document.getElementById("enemyRock").innerHTML = "DRAW";
+        document.getElementById("enemyPaper").innerHTML = "DRAW";
+        document.getElementById("enemyScissors").innerHTML = "DRAW";
+
+        document.getElementById("enemyComplete").innerHTML = "DRAW";
+        document.getElementById("playerComplete").innerHTML = "DRAW";
+
     }
 
     else if (enemyChoice % 3 === 0) {
@@ -65,4 +69,7 @@ function clear() {
     document.getElementById("enemyRock").innerHTML = "";
     document.getElementById("enemyPaper").innerHTML = "";
     document.getElementById("enemyScissors").innerHTML = "";
+
+    document.getElementById("enemyComplete").innerHTML = "<br>";
+        document.getElementById("playerComplete").innerHTML = "<br>";
 }
