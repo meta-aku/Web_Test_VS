@@ -1,12 +1,14 @@
+// Todo
+// Explain what is the difference between var, let and const?
 let playerHealth = 100;
 let enemyHealth = 100;
 console.log("Player health" + playerHealth)
 console.log("Enemy health" + enemyHealth)
 
 // ToDo
-
 // 1. Fix TypeScript errors
-// 2. Write finish writing tests in app.spec.ts file
+// 2. Explain, what are these errors, and why do they happen
+// 3. Open app.spec.ts -file and continue there
 
 
 export function playRock() {
@@ -138,9 +140,11 @@ function clear() {
     document.getElementById("playerComplete").innerHTML = "<br>";
 }
 
-
-
 function playerStatus() {
     document.getElementById("playerHealth").innerHTML = "Health: " + playerHealth;
     document.getElementById("enemyHealth").innerHTML = "Health " + enemyHealth;
 }
+
+(window as any).playRock = playRock;
+(window as any).playPaper = playPaper;
+(window as any).playScissors = playScissors;

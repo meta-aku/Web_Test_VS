@@ -1,4 +1,4 @@
-import {playRock} from './app.ts'
+import {playRock} from './app'
 
 describe('app', () => {
 
