@@ -3,7 +3,7 @@ import {playRock} from './app.ts'
 describe('app', () => {
 
   beforeEach(()=> {
-    // Set up the necessary DOM elements
+    // Set up the necessary DOM elements so that tests can be ran
     document.body.innerHTML = `
       <div id="playerRock"></div>
       <div id="playerPaper"></div>
@@ -16,8 +16,10 @@ describe('app', () => {
       <div id="playerHealth"></div>
       <div id="enemyHealth"></div>
     `
-    
   })
+
+  // ToDo 
+  // Explain, why is this needed so that the test code below can run
 
     it('should call clear, play and playerStatus functions', ()=> {
          playRock()
