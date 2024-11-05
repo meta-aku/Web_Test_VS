@@ -65,10 +65,14 @@
     column-gap: 20px;
 }
 
-#playerStatus {
-    height:50px;
+#player {
+    display: flex;
+    align-items: row;
+    justify-content: center;
+    
+    height:100px;
     width: 100%;
-    background-color:aqua;
+    background-color:rgb(239, 239, 133);
 }
 
 #colArena1, #colArena2, #colArena3 {
@@ -78,15 +82,26 @@
     text-align: center;
 }
 
-#enemyStatus {
-    height:50px;
+#enemy {
+    display: flex;
+    align-items: row;
+    justify-content:center;
+    height:100px;
     width: 100%;
-    background-color: aqua;
+    background-color: rgb(239, 239, 133);
 }
 
+/*
 #playerStatus, #enemyStatus {
+    
+    
     flex: 0 0 92px;
+
     display: flex;
     align-items: center;
+    align-items: baseline;
+    column-gap: 100px;
+    
 }
+*/
   
