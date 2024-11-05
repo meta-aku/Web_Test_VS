@@ -15,12 +15,22 @@ function playScissors() {
 
 }
 
-function play(player) {
+function play(playerChoice) {
     let enemyChoice = Math.floor(Math.random() * 3);
     console.log(enemyChoice);
-    console.log("This is player " + player);
+    console.log("This is player " + playerChoice);
 
-    if (enemyChoice === player) {
+    if (enemyChoice % 3 === 0) {
+        document.getElementById("enemyRock").innerHTML = "Enemy's choice";
+    }
+    else if (enemyChoice % 3 === 1) {
+        document.getElementById("enemyPaper").innerHTML = "Enemy's choice";
+    }
+    else {
+        document.getElementById("enemyScissors").innerHTML = "Enemy's choice";
+    }
+
+    if (enemyChoice === playerChoice) {
         document.getElementById("playerRock").innerHTML = "DRAW";
         document.getElementById("playerPaper").innerHTML = "DRAW";
         document.getElementById("playerScissors").innerHTML = "DRAW";
@@ -33,16 +43,44 @@ function play(player) {
         document.getElementById("playerComplete").innerHTML = "DRAW";
 
     }
+    else {
+        /*
+        0 == rock
+        1 == paper
+        2 == scissors
+        
+        */
+        if (playerChoice == 0 && enemyChoice == 1) {
+            document.getElementById("playerComplete").innerHTML = "LOST";
+            document.getElementById("enemyComplete").innerHTML = "WON";
+            
+        }
+        else if (playerChoice == 0 && enemyChoice == 2) {
+            document.getElementById("playerComplete").innerHTML = "WON";
+            document.getElementById("enemyComplete").innerHTML = "LOST";
+            
+        }
+        else if (playerChoice == 1 && enemyChoice == 0) {
+            document.getElementById("playerComplete").innerHTML = "WON";
+            document.getElementById("enemyComplete").innerHTML = "LOST";
+            
+        }
+        else if (playerChoice == 1 && enemyChoice == 2) {
+            document.getElementById("playerComplete").innerHTML = "LOST";
+            document.getElementById("enemyComplete").innerHTML = "WON";
+            
+        }
+        else if (playerChoice == 2 && enemyChoice == 0) {
+            document.getElementById("playerComplete").innerHTML = "LOST";
+            document.getElementById("enemyComplete").innerHTML = "WON";
+            
+        } else {
+            document.getElementById("playerComplete").innerHTML = "WON";
+            document.getElementById("enemyComplete").innerHTML = "LOST";
+        }
+    }
 
-    else if (enemyChoice % 3 === 0) {
-        document.getElementById("enemyRock").innerHTML = "Enemy's choice";
-    }
-    else if (enemyChoice % 3 === 1) {
-        document.getElementById("enemyPaper").innerHTML = "Enemy's choice";
-    }
-    else if (enemyChoice % 3 === 2) {
-        document.getElementById("enemyScissors").innerHTML = "Enemy's choice";
-    }
+    
 
     /*
     if (enemyChoice % 3 === 0) {
