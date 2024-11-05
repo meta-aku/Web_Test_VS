@@ -4,12 +4,10 @@ let playerHealth = 100;
 let enemyHealth = 100;
 console.log("Player health" + playerHealth);
 console.log("Enemy health" + enemyHealth);
-
 // ToDo
-// 1. Open tsconfig.json file and change "strict": false --> true
-// 2. Fix TypeScript errors
-// 3. Explain, what are these errors, and why do they happen
-// 4. Open app.spec.ts -file and continue there
+// 1. Fix TypeScript errors
+// 2. Explain, what are these errors, and why do they happen
+// 3. Open app.spec.ts -file and continue there
 export function playRock() {
     clear();
     play(0);
@@ -63,9 +61,8 @@ function play(playerChoice) {
         if (playerChoice == 0 && enemyChoice == 1) {
             document.getElementById("playerComplete").innerHTML = "LOST";
             document.getElementById("enemyComplete").innerHTML = "WON";
-            playerHealth = playerHealth -10;
-            
-            
+            playerHealth = playerHealth - 10;
+            enemyHealth = enemyHealth + 10;
         }
         else if (playerChoice == 0 && enemyChoice == 2) {
             document.getElementById("playerComplete").innerHTML = "WON";
@@ -117,32 +114,7 @@ function clear() {
 }
 function playerStatus() {
     document.getElementById("playerHealth").innerHTML = "Health: " + playerHealth;
-    document.getElementById("enemyHealth").innerHTML = "Health: " + enemyHealth;
-
-    if (playerHealth <= 50) {
-        
-        document.getElementById("playerHealth").style.setProperty('--background-color', 'rgb(250, 254, 0)');
-    } 
-    
-    if (playerHealth <= 20) {
-        
-        document.getElementById("playerHealth").style.setProperty('--background-color', 'rgb(217, 9, 82)');
-        document.getElementById("playerHealth").style.setProperty('--color', 'white');
-        document.getElementById("playerHealth").style.setProperty('--font-family', 'Helvetica');
-    }
-
-    if (enemyHealth <= 50) {
-
-        document.getElementById("enemyHealth").style.setProperty('--background-color', 'rgb(250, 254, 0)');
-     
-    }
-    
-    if (enemyHealth <= 20) {
-        
-        document.getElementById("enemyHealth").style.setProperty('--background-color', 'rgb(217, 9, 82)');
-        document.getElementById("enemyHealth").style.setProperty('--color', 'white');
-        document.getElementById("enemyHealth").style.setProperty('--font-family', 'Helvetica');
-    }
+    document.getElementById("enemyHealth").innerHTML = "Health " + enemyHealth;
 }
 window.playRock = playRock;
 window.playPaper = playPaper;
