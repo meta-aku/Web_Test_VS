@@ -70,7 +70,7 @@
     align-items: row;
     justify-content: center;
     
-    height:100px;
+    height:150px;
     width: 100%;
     background-color:rgb(239, 239, 133);
 }
@@ -86,9 +86,13 @@
     display: flex;
     align-items: row;
     justify-content:center;
-    height:100px;
+    height:150px;
     width: 100%;
     background-color: rgb(239, 239, 133);
+}
+
+#enemyHealth, #playerHealth {
+    background-color: rgb(75, 242, 75);
 }
 
 /*

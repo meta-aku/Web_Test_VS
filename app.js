@@ -1,16 +1,24 @@
+let playerHealth = 100;
+let enemyHealth = 100;
+console.log("Player health" + playerHealth)
+console.log("Enemy health" + enemyHealth)
+
 function playRock() {
     clear();
     play(0);
+    playerStatus();
     document.getElementById("playerRock").innerHTML = "Player's choice";
 }
 function playPaper() {
     clear();
     play(1);
+    playerStatus();
     document.getElementById("playerPaper").innerHTML = "Player's choice";
 }
 function playScissors() {
     clear();
     play(2);
+    playerStatus();
     document.getElementById("playerScissors").innerHTML = "Player's choice";
 
 }
@@ -19,6 +27,9 @@ function play(playerChoice) {
     let enemyChoice = Math.floor(Math.random() * 3);
     console.log(enemyChoice);
     console.log("This is player " + playerChoice);
+
+    console.log("Player health in function " + playerHealth)
+    console.log("Enemy health in function " + enemyHealth)
 
     if (enemyChoice % 3 === 0) {
         document.getElementById("enemyRock").innerHTML = "Enemy's choice";
@@ -53,30 +64,39 @@ function play(playerChoice) {
         if (playerChoice == 0 && enemyChoice == 1) {
             document.getElementById("playerComplete").innerHTML = "LOST";
             document.getElementById("enemyComplete").innerHTML = "WON";
+            playerHealth = playerHealth -10;
+            enemyHealth = enemyHealth +10;
             
         }
         else if (playerChoice == 0 && enemyChoice == 2) {
             document.getElementById("playerComplete").innerHTML = "WON";
             document.getElementById("enemyComplete").innerHTML = "LOST";
+            enemyHealth = enemyHealth -10;
+            
             
         }
         else if (playerChoice == 1 && enemyChoice == 0) {
             document.getElementById("playerComplete").innerHTML = "WON";
             document.getElementById("enemyComplete").innerHTML = "LOST";
+            enemyHealth = enemyHealth -10;
+            
             
         }
         else if (playerChoice == 1 && enemyChoice == 2) {
             document.getElementById("playerComplete").innerHTML = "LOST";
             document.getElementById("enemyComplete").innerHTML = "WON";
+            playerHealth = playerHealth -10;
             
         }
         else if (playerChoice == 2 && enemyChoice == 0) {
             document.getElementById("playerComplete").innerHTML = "LOST";
             document.getElementById("enemyComplete").innerHTML = "WON";
+            playerHealth = playerHealth -10;
             
         } else {
             document.getElementById("playerComplete").innerHTML = "WON";
             document.getElementById("enemyComplete").innerHTML = "LOST";
+            enemyHealth = enemyHealth -10;
         }
     }
 
@@ -109,5 +129,12 @@ function clear() {
     document.getElementById("enemyScissors").innerHTML = "";
 
     document.getElementById("enemyComplete").innerHTML = "<br>";
-        document.getElementById("playerComplete").innerHTML = "<br>";
+    document.getElementById("playerComplete").innerHTML = "<br>";
+}
+
+
+
+function playerStatus() {
+    document.getElementById("playerHealth").innerHTML = "Health: " + playerHealth;
+    document.getElementById("enemyHealth").innerHTML = "Health " + enemyHealth;
 }
