@@ -65,7 +65,7 @@ function play(playerChoice) {
             document.getElementById("playerComplete").innerHTML = "LOST";
             document.getElementById("enemyComplete").innerHTML = "WON";
             playerHealth = playerHealth -10;
-            enemyHealth = enemyHealth +10;
+            
             
         }
         else if (playerChoice == 0 && enemyChoice == 2) {
@@ -136,5 +136,30 @@ function clear() {
 
 function playerStatus() {
     document.getElementById("playerHealth").innerHTML = "Health: " + playerHealth;
-    document.getElementById("enemyHealth").innerHTML = "Health " + enemyHealth;
+    document.getElementById("enemyHealth").innerHTML = "Health: " + enemyHealth;
+
+    if (playerHealth <= 50) {
+        
+        document.getElementById("playerHealth").style.setProperty('--background-color', 'rgb(250, 254, 0)');
+    } 
+    
+    if (playerHealth <= 20) {
+        
+        document.getElementById("playerHealth").style.setProperty('--background-color', 'rgb(217, 9, 82)');
+        document.getElementById("playerHealth").style.setProperty('--color', 'white');
+        document.getElementById("playerHealth").style.setProperty('--font-family', 'Helvetica');
+    }
+
+    if (enemyHealth <= 50) {
+
+        document.getElementById("enemyHealth").style.setProperty('--background-color', 'rgb(250, 254, 0)');
+     
+    }
+    
+    if (enemyHealth <= 20) {
+        
+        document.getElementById("enemyHealth").style.setProperty('--background-color', 'rgb(217, 9, 82)');
+        document.getElementById("enemyHealth").style.setProperty('--color', 'white');
+        document.getElementById("enemyHealth").style.setProperty('--font-family', 'Helvetica');
+    }
 }
