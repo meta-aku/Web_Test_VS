@@ -4,10 +4,12 @@ let playerHealth = 100;
 let enemyHealth = 100;
 console.log("Player health" + playerHealth);
 console.log("Enemy health" + enemyHealth);
+
 // ToDo
-// 1. Fix TypeScript errors
-// 2. Explain, what are these errors, and why do they happen
-// 3. Open app.spec.ts -file and continue there
+// 1. Open tsconfig.json file and change "strict": false --> true
+// 2. Fix TypeScript errors
+// 3. Explain, what are these errors, and why do they happen
+// 4. Open app.spec.ts -file and continue there
 export function playRock() {
     clear();
     play(0);
