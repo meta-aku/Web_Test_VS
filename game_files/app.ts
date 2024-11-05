@@ -3,19 +3,25 @@ let enemyHealth = 100;
 console.log("Player health" + playerHealth)
 console.log("Enemy health" + enemyHealth)
 
-function playRock() {
+// ToDo
+
+// 1. Fix TypeScript errors
+// 2. Write finish writing tests in app.spec.ts file
+
+
+export function playRock() {
     clear();
     play(0);
     playerStatus();
     document.getElementById("playerRock").innerHTML = "Player's choice";
 }
-function playPaper() {
+export function playPaper() {
     clear();
     play(1);
     playerStatus();
     document.getElementById("playerPaper").innerHTML = "Player's choice";
 }
-function playScissors() {
+export function playScissors() {
     clear();
     play(2);
     playerStatus();
