@@ -3,7 +3,6 @@
 let playerHealth = 100;
 let enemyHealth = 100;
 let enemyHealthMultiplier = 1;
-console.log(enemyHealthMultiplier);
 console.log("Player health: " + playerHealth)
 console.log("Enemy health: " + enemyHealth)
 
