@@ -6,7 +6,6 @@ let enemyHealthMultiplier = 1;
 console.log(enemyHealthMultiplier);
 console.log("Player health: " + playerHealth);
 console.log("Enemy health: " + enemyHealth);
-console.log("This page works");
 // ToDo
 // 1. Fix TypeScript errors
 // 2. Explain, what are these errors, and why do they happen
