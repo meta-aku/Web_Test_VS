@@ -74,7 +74,6 @@ function play(playerChoice) {
             document.getElementById("playerComplete").innerHTML = "LOST";
             document.getElementById("enemyComplete").innerHTML = "WON";
             playerHealth = playerHealth -10;
-            enemyHealth = enemyHealth +10;
             
         }
         else if (playerChoice == 0 && enemyChoice == 2) {
@@ -185,18 +184,46 @@ function playerStatus() {
         
         /*Resetting enemy health*/
         enemyHealth = 100;
+        enemyHealthMultiplier = enemyHealthMultiplier + 1;
         enemyHealth = enemyHealth + 10 * enemyHealthMultiplier;
-        enemyHealthMultiplier = enemyHealthMultiplier + 0,1;
-        console.log("enemyHealthMultiplier shoud be more than 0: " + enemyHealthMultiplier);
+        console.log("enemyHealthMultiplier shoud be more than 1: " + enemyHealthMultiplier);
         
         console.log("Enemy health after player has won: " + enemyHealth);
-        /*Resetting enemy health*/
+
+        /*Resetting player health*/
         playerHealth = 100;
 
 
         /*Starting the next round*/
-        document.getElementById("playerComplete").innerHTML = "STARTING ROUND " + (enemyHealthMultiplier + 1);
-        document.getElementById("enemyComplete").innerHTML = "STARTING ROUND " + (enemyHealthMultiplier + 1);
+        document.getElementById("playerComplete").innerHTML = "STARTING ROUND " + enemyHealthMultiplier;
+        document.getElementById("enemyComplete").innerHTML = "STARTING ROUND " + enemyHealthMultiplier;
+    }
+
+    /*Player Loses*/
+    if (playerHealth <= 0) {
+        document.getElementById("enemyHealth").style.setProperty('--font-family:', 'Times New Roman');
+        document.getElementById("enemyHealth").style.setProperty('--background-color', 'rgb(75, 242, 75)');
+        document.getElementById("enemyHealth").style.setProperty('--color', 'white');
+        document.getElementById("playerHealth").style.setProperty('--font-family:', 'Times New Roman');
+        document.getElementById("playerHealth").style.setProperty('--background-color', 'rgb(75, 242, 75)');
+        document.getElementById("playerHealth").style.setProperty('--color', 'white');
+        document.getElementById("playerHealth").innerHTML = "Player has fallen";
+        document.getElementById("enemyHealth").innerHTML = "Enemy has won";
+        
+        /*Resetting enemy health*/
+        enemyHealth = 100;
+        enemyHealthMultiplier = 1;
+        console.log("enemyHealthMultiplier shoud be more than 0: " + enemyHealthMultiplier);
+        
+        console.log("Enemy health after player has lost: " + enemyHealth);
+        console.log("Player lost");
+        /*Resetting player health*/
+        playerHealth = 100;
+
+
+        /*Game Over and starting from the round 1*/
+        document.getElementById("playerComplete").innerHTML = "GAMER OVER - CONTINUE?";
+        document.getElementById("enemyComplete").innerHTML = "GAMER OVER - CONTINUE?";
     }
 }
 
